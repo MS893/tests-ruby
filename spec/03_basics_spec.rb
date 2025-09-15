@@ -33,6 +33,7 @@ describe '42 finder' do
   # Hint: google ruby array each
   it 'finds 42' do
     expect(array_42([1, 2, 3, 4, 5, 6, 7 , 8, 9, 10])).to eq false
+    expect(array_42([])).to eq false  # test ajouté par moi
     expect(array_42([1, 2, 3, 4, 5, 6, 7 , 8, 9, 42, 21, 10.5])).to eq true
   end
 end
