@@ -39,11 +39,14 @@ def magic_array(array)
   # - with each multiple of 3 removed
   # - with each number duplicate removed (any number should appear only once)
   # - sorted
-  array = array.flatten                     # transforme l'array en un array simple (les arrays à l'intérieur sont intégrés à l'array)
-  array = array.sort                        # trie par ordre croissant, il peut y avoir des doublons
-  array = array.map { |x| x * 2 }           # multiplie chaque élément du tableau par 2
-  array = array.reject { |x| x % 3 == 0 }   # retire les multiples de 3 du tableau (le reste de modulo 3 égal 0, donc multiple de 3)
-  array = array.uniq                        # retire les doublons
-  array = array.sort                        # trie une nouvelle fois par ordre croissant INUTILE !!! car déjà trié
-  return array
+
+  return array.flatten.sort.map { |x| x * 2 }.reject { |x| x % 3 == 0 }.uniq.sort # bonus
+
+#  array = array.flatten                     # transforme l'array en un array simple (les arrays à l'intérieur sont intégrés à l'array)
+#  array = array.sort                        # trie par ordre croissant, il peut y avoir des doublons
+#  array = array.map { |x| x * 2 }           # multiplie chaque élément du tableau par 2
+#  array = array.reject { |x| x % 3 == 0 }   # retire les multiples de 3 du tableau (le reste de modulo 3 égal 0, donc multiple de 3)
+#  array = array.uniq                        # retire les doublons
+#  array = array.sort                        # trie une nouvelle fois par ordre croissant INUTILE !!! car déjà trié
+#  return array
 end
