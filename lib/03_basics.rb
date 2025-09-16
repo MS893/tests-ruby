@@ -12,7 +12,6 @@ def who_is_bigger(a, b, c)
 end
 
 def reverse_upcase_noLTA(string)
-
   # retourne l'inverse de la chaine convertie en majuscules
   string = string.reverse
   string = string.upcase
